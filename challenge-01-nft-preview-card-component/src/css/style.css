@@ -5,16 +5,26 @@ body{
     font-family: 'Outfit', sans-serif;
 }
 
-h1{
-    display: none;
-}
-
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 97vh;
     padding: 0 25px;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
 }
 
 .nft-card{
@@ -42,6 +52,7 @@ main{
     position: absolute;
     opacity: 0;
     transition: 0.3s ease-in-out;
+    border-radius: 7px;
 }
 
 .nft-card .image-link::after{
@@ -62,13 +73,16 @@ main{
     opacity: 1;
 }
 
-.nft-card .title-link .title{
-    font-size: 22px;
-    color: #fff;
+.nft-card .title{
     margin: 25px 0 20px;
 }
 
-.nft-card .title-link .title:hover{
+.nft-card .title .title-link{
+    font-size: 22px;
+    color: #fff;
+}
+
+.nft-card .title .title-link:hover{
     color: var(--primary-medium);
 }
 
@@ -89,6 +103,7 @@ main{
 .nft-card .info .price{
     color: var(--primary-medium);
     display: flex;
+    font-weight: 600;
 }
 
 .nft-card .info .price::before{
